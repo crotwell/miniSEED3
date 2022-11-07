@@ -37,7 +37,6 @@ master_doc = 'index'
 extensions = [
   'sphinx_rtd_theme',
   'sphinxmark',
-  'sphinx-jsonschema',
   'sphinx_toolbox.collapse',
 ]
 
@@ -91,3 +90,22 @@ sphinxmark_enable = True
 
 # Sphinxmark options, 'document' is the div for the RTD theme body
 sphinxmark_div = 'document'
+
+
+# -- Generate JSON schema documentation -------------------------------
+
+import jsonschema2rst
+from jsonschema2rst.parser import schema2rst
+import os
+
+output_path = os.path.abspath(".")
+input_file = os.path.abspath("extra-headers/ExtraHeaders-FDSN-v1.0.schema.json")
+excluded_key = ""
+with open(input_file) as schema:
+
+    rst_content = schema2rst(schema, excluded_key)
+
+    output = "ExtraHeaders-FDSN-v1.0-schema.rst"
+
+    with open(output, 'wb') as rst_out:
+        rst_out.write(rst_content.encode('utf-8'))

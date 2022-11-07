@@ -27,6 +27,7 @@ such as location, instrument response, etc.
    definition
    data-encodings
    extra-headers
+   ExtraHeaders-FDSN-v1.0-schema
    background
    appendix
    software

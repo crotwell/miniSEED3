@@ -29,14 +29,9 @@ container of the extra headers is reserved for definition by the FDSN.
 The documentation and schema of these headers are specified in JSON
 Schema here:
 
-.. collapse:: FDSN Extra Header schema v1.0
 
-  .. jsonschema:: extra-headers/ExtraHeaders-FDSN-v1.0.schema.json
-    :lift_definitions:
-    :auto_reference:
-    :auto_target:
+:doc:`JSON Schema Documentation<ExtraHeaders-FDSN-v1.0-schema>`
 
-|
 
 Download `FDSN Extra Header schema v1.0 <https://raw.githubusercontent.com/iris-edu/miniSEED3/main/extra-headers/ExtraHeaders-FDSN-v1.0.schema.json>`_.
 
